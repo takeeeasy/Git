@@ -1,0 +1,373 @@
+<!DOCTYPE html>  
+<html>
+<meta charset="utf-8">  
+<head>
+     <link ref='http://fonts.googleapis.com/css?family=Arial' rel='stylesheet' type='text/css'>
+     <link ref='http://fonts.googleapis.com/css?family=sans-serif' rel='stylesheet' type="text/css">
+      <link ref='http://fonts.googleapis.com/css?family=Helvetica' rel='stylesheet' type="text/css">
+<style type="text/css">
+       /* Add a black background color to the top navigation */
+html,body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+#mainimage {
+    /* The image used */
+    background-image: url("mainbuilding.png");
+    -webkit-filter: contrast(150%); /* Safari 6.0 - 9.0 */
+    filter: contrast(150%);
+    /* Full height */
+    height: 850px; 
+    wh
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main2{
+    width: 40%;
+    height: 500px;
+    background-color: #E9F3F6;
+    min-width: 450px;
+    position: absolute;
+}
+.blur {
+    top: 100px;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 54, 102, 0.7); /* Black background with transparency */
+    color: #f1f1f1;
+    width: 40%;
+    height:850px;
+    min-width: 450px;
+}
+.blur .blurtext{
+    width: 300px;
+    height: 150px;
+    margin: auto;
+    right: 20px;
+    margin-top: 280px;
+    margin-right: 25px;
+    }
+.topnav {
+    background-color: white;
+    overflow: hidden;
+    top: 25px;
+    width:400px;
+    margin-right:0px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #123478;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14.5px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: #6CEEFF;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+.logo {
+float:left;
+vertical-align:baseline;
+    
+}
+.main2 h1 {
+    padding-left: 20%;
+    padding-top: 80px;
+    color: #24466F;
+    font: normal normal normal 42px/1.4em raleway,sans-serif;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.main2 p {
+    padding-left: 20%;
+    color: #24466F;
+    font: normal normal normal 42px/1.4em raleway,sans-serif;
+    margin-top: 0;
+}
+/*.container {
+    position: relative;
+}*/
+.txtbox1 {
+    display: block;
+    width: 100%;
+    visibility: inherit;
+    object-fit: cover;
+    background-color: #F7F7F7;
+    height :500px;
+    min-width: 900px;
+    margin: auto;
+}
+.txtbox2{
+    margin:auto;
+    display: block;
+    width: 60%;
+    visibility: inherit;
+    object-fit: cover;
+    background-color: #FFFFFF;
+    height :450px;
+    padding-left:40%;
+  /*  border: 1px solid #E1E1E1;*/
+}
+.middle-nav{
+    background-color: #F7F7F7;
+    height: 50px;
+    list-style: none;   
+    padding: 0;
+    margin:0;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 90px;
+}
+
+#middle-menu {
+    position: relative;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: grey;
+    float: left;
+   
+   
+}
+#middle-menu a:hover{
+    background-color: #EBEBEB;
+    font-weight: bold;
+    font-size: 18px;
+}
+.middle-nav a:hover{
+    /*color:white;*/
+/*    font-size: 18px;*/
+    padding: 0px;
+    margin:0px;
+}
+.middle-list{
+    min-width: 800px;
+    max-width: 60%;
+    display: block;
+    list-style: none;
+    padding: 0px;  
+    position: absolute;
+    padding-top: 80px;
+    margin: auto;
+}
+#noticeList, #noticeList a {
+    text-decoration: none;
+    padding-bottom: 5px;
+}
+#noticeList a:hover{
+    text-decoration: none;
+    font-weight: bold;
+}
+span.ntDPT {
+    display:inline-block;
+    width:100px;
+    color:#00479d;
+    padding-left: 5px;
+}
+.plusList a{
+    position: absolute;
+    background-image: url("plus.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    height: 30px;
+    width: 30px;
+}
+.plusList a:hover{
+    color: blue;
+}
+.font1 {
+    font: normal normal normal 20px/1.4em 'open sans',sans-serif;
+    color:#00305B;
+    margin-top: 4px;
+    margin: 0;
+}
+.p1{
+    height:20px;
+    margin: 0px;
+    width: auto;
+}
+.blank{
+    height:20px;
+    margin: 0px;
+}
+
+/* *************************************************************************** 
+* 메인 본문 요소 : 공지사항 보기
+***************************************************************************   */
+
+/*#gzNotice {
+    clear:both;
+    padding:17px 0 0 0;
+}
+
+#gzNotice .noticeBox {
+    background-color:#f4f4f4;
+    height:410px;
+}
+#gzNotice .noticeBox:after {content:''; display:block; clear:both; float:none; }
+
+#gzNotice .noticeBox .noticeList {
+    padding:10px 25px 10px 25px;
+}
+
+#gzNotice .noticeBox .noticeList .tabRow {
+    float:left;
+}
+#gzNotice .noticeBox .noticeList .tabRow .noticeTabBtn {
+    display:inline-block;
+    padding:10px 0px;
+    width:124px;
+    text-align:center;
+    font-weight:bold;
+    background-color:transparent;
+    color:#444444;
+}
+
+#gzNotice .noticeBox .noticeList .tabRow .tabList {
+    display: none;
+    position: absolute;
+    padding:15px 20px;
+    width:1038px;
+    background-color: #FFF;
+    border: 1px solid #e6e6e6;
+}
+#gzNotice .noticeBox .noticeList .tabRow .tabList li {
+    padding:5px 0;
+}
+#gzNotice .noticeBox .noticeList .tabRow .tabList span.ntDATE {
+    float:right;
+}
+#gzNotice .noticeBox .noticeList .tabRow .tabList span.ntDPT {
+    display:inline-block;
+    width:200px;
+    color:#00479d;
+}
+#gzNotice .noticeBox .noticeList .tabRow .tabList a {
+    display:inline-block;
+}
+
+#gzNotice #noticeTab_0 .tabList {}
+#gzNotice #noticeTab_1 .tabList { margin-left:-124px;}
+#gzNotice #noticeTab_2 .tabList { margin-left:-248px;}
+#gzNotice #noticeTab_3 .tabList { margin-left:-372px;}
+#gzNotice #noticeTab_4 .tabList { margin-left:-496px;}
+
+#gzNotice .goList {
+    position: absolute;
+    background-image: url(../images/btn_more.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    height:30px;
+    width:30px;
+    margin-top:-34px;
+}
+#gzNotice .goList:hover {
+    background-image: url(../images/btn_more_ov.png);
+}
+#gzNotice #noticeTab_0 .goList {margin-left:1040px;display:none;}
+#gzNotice #noticeTab_1 .goList { margin-left:916px; display:none;}
+#gzNotice #noticeTab_2 .goList { margin-left:792px; display:none;}
+#gzNotice #noticeTab_3 .goList { margin-left:668px; display:none;}
+#gzNotice #noticeTab_4 .goList { margin-left:544px; display:none;}
+
+#gzNotice .goList span {
+    display:none;
+}*/
+</style>  
+ 
+</head>  
+<body>
+<header style=" height: 80px; directionsplay: flex;">
+    <nav style="margin-top: 20px; height: 60px; ">
+        <div style="width:20%; height:36px; float:left; text-align: right;">
+            <img src="comSymbol.png">
+        </div>
+    
+        <div style="width:30%; height:36px; float:left; top-margin:10px; text-align: left;">
+            <h1 style="margin-top:0; color: #004554">Toronto OpenSource</h1>
+        </div>
+        <div class="topnav">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="#about">문의</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <div id="mainimage">
+        </div>
+        <div class="blur">
+            <div class="blurtext">
+                <h1 style="font-size: 32px;">Toronto
+                OpenSource</h1>
+                <p style="font-size: 18px;">글로벌 시대의 트렌드를 선도합니다</p>
+            </div>
+        </div>
+
+            <div class="main2"><h1 style="width: 200px; margin: 0px;">PRACTICE</h1>
+        <p>전문분야</p>
+        </div>
+    <div class="container1">
+        <div class="txtbox1">
+            <div class="txtbox2">
+                <ul class="middle-nav">
+                    <li><a class ="active" href="#home" id="middle-menu">공지사항</a></li>
+                    <ul class="middle-list">
+                        <li id="noticeList"> 
+                            <span class="ntDPT">경영지원팀</span>
+                            <a href="http://www.donga.ac.kr/MM_PAGE/SUB007/SUB_007001.asp?PageCD=007001&amp;BIDX=15&amp;NUM=2267900" target="_blank">한국대학사회봉사협의회 5기 월드프렌즈 청년 중기봉사단원 모집 안내</a>
+                            <span>2018.05.01 ~ 2018.05.16</span>
+                        </li>
+                         <li id="noticeList"> 
+                            <span class="ntDPT">경영지원팀</span>
+                            <a href="http://www.donga.ac.kr/MM_PAGE/SUB007/SUB_007001.asp?PageCD=007001&amp;BIDX=15&amp;NUM=2267900" target="_blank">한국대학사회봉사협의회 5기 월드프렌즈 청년 중기봉사단원 모집 안내</a>
+                            <span>2018.05.01 ~ 2018.05.16</span>
+                        </li>
+                         <li id="noticeList"> 
+                            <span class="ntDPT">인사팀</span>
+                            <a href="http://www.donga.ac.kr/MM_PAGE/SUB007/SUB_007001.asp?PageCD=007001&amp;BIDX=15&amp;NUM=2267900" target="_blank">한국대학사회봉사협의회 5기 월드프렌즈 청년 중기봉사단원 모집 안내</a>
+                            <span>2018.05.01 ~ 2018.05.16</span>
+                        </li>
+                         <li id="noticeList"> 
+                            <span class="ntDPT">개발팀</span>
+                            <a href="http://www.donga.ac.kr/MM_PAGE/SUB007/SUB_007001.asp?PageCD=007001&amp;BIDX=15&amp;NUM=2267900" target="_blank">한국대학사회봉사협의회 5기 월드프렌즈 청년 중기봉사단원 모집 안내</a>
+                            <span>2018.05.01 ~ 2018.05.16</span>
+                        </li>
+                         <li id="noticeList"> 
+                            <span class="ntDPT">경영지원팀</span>
+                            <a href="http://www.donga.ac.kr/MM_PAGE/SUB007/SUB_007001.asp?PageCD=007001&amp;BIDX=15&amp;NUM=2267900" target="_blank">한국대학사회봉사협의회 5기 월드프렌즈 청년 중기봉사단원 모집 안내</a>
+                            <span>2018.05.01 ~ 2018.05.16</span>
+                        </li>
+                    </ul>
+                    <li><a href="#news" id="middle-menu">업무관리</a></li>
+                    <li><a href="#contact" id="middle-menu">일정관리</a></li>
+                    <li><a href="#about" id="middle-menu">자유게시판</a></li>
+                    <a class="plusList" href="#"></a>
+                </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+</main> 
+</body>  
+</html>  
